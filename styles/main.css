@@ -9,10 +9,11 @@ ul a{
     text-decoration: none;
     width:80%;
     background-color: aliceblue;
+    border-radius: 15px;
 }
 
 body{
-    background-color:#f0f3c8;
+    background: radial-gradient(circle, blue, white)
 }
 
 h1{
