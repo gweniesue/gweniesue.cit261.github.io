@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <h1 class="headline">ToDo's</h1>
+    <form class="todoList">
+
+        <ul class="todoCheckList">
+            <li class="todoCheckItem"><input type="checkbox"> todo 1<button>X</button></li>
+            <li class="todoCheckItem"><input type="checkbox"> todo 2<button>X</button></li>
+            <li class="todoCheckItem"><input type="checkbox"> todo 3<button>X</button></li>
+            <li class="todoCheckItem"><input type="checkbox"> todo 4<button>X</button></li>
+        </ul>
+        <nav class="todoListFooter">
+            <ul>
+                <li class="todoFooterItem">Tasks left</li>
+                <li class="todoFooterItem">All</li>
+                <li class="todoFooterItem">Active</li>
+                <li class="todoFooterItem">Completed</li>
+            </ul>
+        </nav>
+    </form>
+    <footer>
+        <div id="myDIV" class="footer">
+
+            <input type="text" id="myInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+        </div>
+
+    </body>
+    </footer>
+    <script src='main.js'></script>
+</body>
+</html>
