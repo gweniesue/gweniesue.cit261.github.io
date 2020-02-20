@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gwendolyn Allphin's Portfolio Week 7</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="../styles/main.css">
 </head>
 <body>
     <header>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="week1.html">Week 1</a></li>
             <li><a href="week2.html">Week 2</a></li>
             <li><a href="week3.html">Week 3</a></li>
@@ -25,23 +25,83 @@
 
         <section>
             <ul>
-                <li><a href="/ninjaproject/ninja7.html">Ninja Project Week 7</a></li>
-                <li><a href="week7team/week5teamIndex.html">Week 7 Team activity</a></li>
-                <li><a href="ToDoProject/index.html">To Do Work in Progress</a></li>
+                <li><a href="../ninjaproject/ninja7.html">Ninja Project Week 7</a></li>
+                <li><a href="../ninjaproject/ninja7b.html">Ninja Project Week 7</a></li>
+                <li><a href="../week7team/hiking-complete.html">Week 7 Team activity</a></li>
+                <li><a href="../ToDoProject/index.html">To Do Work in Progress</a></li>
+                <li><a href="../week7/ajax.html">AJAX Fun Facts</a></li>
+                <li><a href="../week7/todo.html">Quick Going Nowhere todo</a></li>
             </ul>
             <ul>
                 <ul id="whatILearned">
-                    <h3>Chapter 10</h3>
-                    <li>Bugs are unavoidable in code, and it’s best to find them early rather than later.</li>
-                    <li>JavaScript can be put into strict mode using the string "use strict" . This can be used in a whole file or just a single function.</li>
-                    <li>Linting tools can be used to ensure your code follows good practice and conventions.</li>
-                    <li>Feature detection can check whether a method is supported before calling it, helping to avoid an exception being thrown.</li>
-                    <li>The console and browser’s built-in debugging tool can be used to interactively find and fix bugs in code.</li>
-                    <li>Exceptions can be thrown using the throw statement.</li>
-                    <li>An error object is created when an exception occurs.</li>
-                    <li>Any code placed inside a try block will pass any error objects to a catch block when an exception occurs. Any code inside a finally block will run if an exception does or does not occur.</li>
-                    <li>Test-driven development is the practice of writing tests that fail, then writing the code that passes the test, then refactoring the code every time a new feature is implemented.</li>
-                    <li>The Jest framework can be used to test your code.</li>
+                    <h3>Chapter 11 Further Functions</h3>
+                    <li><b>Immediately Invoked Function Expression</b>– or IIFE – (pronounced 'iffy') is an anonymous 
+                        function that, as the name suggests, is invoked as soon as it’s defined. This is easily 
+                        achieved by placing parentheses at the end of the function definition (remember we use 
+                        parentheses to invoke a function). The function also has to be made into an expression, 
+                        which is done by placing the whole declaration inside parentheses</li>
+                    <li>Placing any code that uses the temporary variable inside an IIFE will ensure it’s only 
+                        available while the IIFE is invoked, then it will disappear. </li>
+                    <li>An IIFE can be used to set up any initialization code that there’ll be no need for again. 
+                        Because the code is only run once, there’s no need to create any reusable, named functions, 
+                        and all the variables will also be temporary. An IIFE will be invoked once, and can set up 
+                        any variables, objects and event handlers when the page loads. </li>
+                    <li><b>Pure Functions:</b> A key aspect of functional programming is its use of pure functions. A pure 
+                        function is a function that adheres to the following rules:
+                        <ul>
+                            <li>1) The return value of a pure function should only depend on the values provided as arguments. 
+                                It doesn't rely on values from somewhere else in the program.</li>
+                            <li>2) There are no side-effects. A pure function doesn't change any values or data 
+                                elsewhere in the program. It only makes non-destructive data transformations and 
+                                returns new values, rather than altering any of the underlying data.</li>
+                            <li>3) Referential transparency. Given the same arguments, a pure function will 
+                                always return the same result.</li>
+                        </ul></li>
+                    <li>Functions have built-in properties such as length , but can have custom properties added.</li>
+                    <li>All functions have <i>call()</i> and <i>apply()</i> methods that can invoke a function with the value of this 
+                        bound to an object that is provided as an argument.</li>
+                    <li>Immediately Invoked Function Expressions or IIFEs are functions that are enclosed in parentheses 
+                        and immediately followed by double parentheses so they’re invoked. They are useful for namespacing 
+                        variables and setting default values.</li>
+                    <li>Functions are able to dynamically redefine themselves in the body of the function, depending 
+                        on certain conditions.</li>
+                    <li>A recursive function will keep invoking itself until a certain condition is met.</li>
+                    <li>A callback is a function that’s provided as an argument to another function.</li>
+                    <li>Callbacks are frequently used in asynchronous programming as part of the event loop. This means 
+                        that a program can continue to run in a single thread while waiting for another task to be 
+                        completed.</li>
+                    <li>Promises can be used instead of callbacks to deal with multiple asynchronous actions in 
+                        sequence. They also provide a nicer mechanism for handling errors.</li>
+                    <li>Functions that return other functions are known as higher-order functions.</li>
+                    <li>A closure is the process of keeping a reference to a variable available outside the scope 
+                        of the function it was originally defined in.</li>
+                    <li>A generator is created by placing an asterisk character (*) after the <i>function</i> keyword.</li>
+                    <li>A generator function will return an iterator object that provides a <i>next()</i> method, which 
+                        returns the next value in a sequence that is defined in the generator function.</li>
+                    <li>Functional programming involves breaking processes down into steps that can be applied 
+                        as a series of functions.</li>
+                    <li>Pure functions are functions that don't rely on the state of the code they are called from, 
+                        have no side-effects, and always give the same result when given the same arguments 
+                        (referential transparency).</li>
+                    <li>Currying or partial application is the process of applying one argument at a time to a 
+                        function. A new function is returned until all the arguments have been used.</li>
+                    
+                </ul>
+                <ul id="whatILearned">
+                    <h3>Chapter 13 AJAX</h3>
+                    <li>Ajax is a technique for sending and receiving data asynchronously in the background.</li>
+                    <li>The data can be sent in many forms, but it is usually in JSON.</li>
+                    <li>Ajax can be used for making partial page updates without having to do a full page reload.</li>
+                    <li>Ajax can be used for communicating with external APIs.</li>
+                    <li>Ajax requests can be made using the Fetch API.</li>
+                    <li>The Response interface allows you to control the response received from a request or to create 
+                        your own response objects.</li>
+                    <li>The Request interface allows you to create a request object that contains information about 
+                        the request being made, such as the URL and headers.</li>
+                    <li>The Headers interface allows you to create HTTP headers that can be added to a request 
+                        or response object.</li>
+                    <li>Requests can retrieve data using a GET request, or send data using a POST request.</li>
+                    <li>The FormData interface makes it easier to send data from forms.</li>
                 </ul>
             </ul>
             
