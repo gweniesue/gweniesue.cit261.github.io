@@ -1,0 +1,58 @@
+.photo {
+    border: solid 6px black;
+    transform: translateX(45px) rotate(-15deg);
+}
+
+.heading h1:hover span {
+    color: #ed0c0c;
+    transform: translateX(40px) scale(2) skew(15deg, 4deg);
+    transition: transform .4s ease-out 50ms;
+
+    display: inline-block;
+}
+
+#div1 {
+    width: 100px;
+    height: 100px;
+    background: #7d10b0;
+    position: relative;
+    animation: mymove1 5s infinite;
+}
+
+@keyframes mymove1 {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
+#div2 {
+    width: 100px;
+    height: 100px;
+    background: #11f075;
+    position: relative; 
+    animation: mymove2 5s infinite;
+}
+
+@keyframes mymove2 {
+    0%   {top: 120px; background: #11f075; width: 100px;}
+    100% {top: 220px; background: #e9f011; width: 300px;}
+}
+
+#div3 {
+    width: 100px;
+    height: 100px;
+    background: #1163f0;
+    position: relative;
+    animation: mymove3 15s infinite;
+}
+
+@keyframes mymove3 {
+    0%, 100% {
+        opacity: 0;
+        }
+        20%, 80% {
+        opacity: 1;
+        }
+}
+
