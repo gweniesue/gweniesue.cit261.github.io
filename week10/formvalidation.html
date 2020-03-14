@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="../week10/formvalidation.css">
+<head>
+    
+  
+        <!--
+        // Form validation code will come here.
+        //
+        -->
+    </script>
+</head>
+
+<body>
+    <form action="/cgi-bin/test.cgi" name="myForm" onsubmit="return(validate());">
+        <table>
+
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="Name" /></td>
+            </tr>
+
+            <tr>
+                <td>EMail</td>
+                <td><input type="text" name="EMail" /></td>
+            </tr>
+
+            <tr>
+                <td>Zip Code</td>
+                <td><input type="text" name="Zip" /></td>
+            </tr>
+
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select name="Country">
+                        <option value="-1" selected>[choose yours]</option>
+                        <option value="1">USA</option>
+                        <option value="2">UK</option>
+                        <option value="3">INDIA</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>
+            </tr>
+
+        </table>
+    </form>
+    <script src="formvalidation.js"></script>
+</body>
+</html>
