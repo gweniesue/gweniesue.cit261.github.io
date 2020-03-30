@@ -1,0 +1,131 @@
+body {
+	background-color: #00e0e0;
+}
+
+input.addButton {
+    padding: 4px 10px;;
+	font-size: 20px;
+}
+
+input {
+	padding: 12px;
+}
+
+main {
+    padding: 10px;
+	margin: 5px;
+}
+
+h2 {
+	background-color: #000808;
+	color: #00e0e0;
+	padding: 20px;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+#addButton {
+	box-shadow: 0px 1px 0px 0px #004092;
+	color:#ffffff;
+	background-color:#0070e0;
+	border-radius:6px;
+	border:1px solid #004092;
+	display:inline-block;
+	cursor:pointer;
+	font-size: 1em;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #004092;
+}
+#addButton:hover {
+	background-color:#57abff;
+}
+#addButton:active {
+	position:relative;
+	top:1px;
+}
+
+.done span {
+	text-decoration: line-through;
+  }
+
+  .item {
+	  list-style-type: none;
+	  font-size: 20px;
+	  margin: 10px;
+  }
+
+
+  .deletedItem {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background-color:#6a0000;
+	border-radius:3px;
+	border:1px solid #570000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:.5em;
+	padding:4px 4px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #570000;
+}
+.deletedItem:hover {
+	background-color:#cc0000;
+}
+.deletedItem:active {
+	position:relative;
+}
+
+#sortedList {
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 0;
+}
+.sorted ul li {
+	list-style-type: none;
+	flex-direction: row;
+	padding: 10px;
+}
+
+.selected {
+	border: 2px solid #000000;
+}
+
+.item {
+	font-family: 'Liu Jian Mao Cao', cursive;
+	font-style: oblique;
+	font-size: 2em;
+}
+
+
+
+.sortedButtons {
+	box-shadow: 0px 1px 0px 0px #004092;
+	color:#ffffff;
+	background-color:#0070e0;
+	border-radius:6px;
+	border:1px solid #004092;
+	display:inline-block;
+	cursor:pointer;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #004092;
+}
+.sortedButtons:hover {
+	background-color:#004992;
+}
+.sortedButtons:active {
+	position:relative;
+	top:1px;
+}
+
+hr {
+	border: 1.5px solid #000000;
+}
+
+
+
+

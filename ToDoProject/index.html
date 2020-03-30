@@ -5,17 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ToDo App</title>
-    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+    <title>To Do List</title>
 </head>
+<body>
+    <main>
+        <section class="toDoList"> 
+            <h2>My To-Do List</h2>
+            <hr>
+            <ul id="list" class="doList">              
+            </ul>
+        </section>
+        <hr>
+        <div id="add" class="input">
+            <input type="text" id="toDoItem">
+            <input type="button" id="addButton" value="Add Item">
+        </div>
+        <hr>
+        <div class="sorted">
+            <ul id="sortedList">
+                <li onclick="loadToDoItem()" >
+                    <button type="button" class="sortedButtons" id="all">All</button>
+                </li>
+                <li onclick="completed()">
+                    <button type="button" class="sortedButtons" id="completed">Completed</button>
+                </li>
+                <li onclick="uncompleted()">
+                    <button type="button" class="sortedButtons" id="uncompleted">Uncompleted</button>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>
 
-<body class="headline">
-    <h1>To Do List</h1>
-    <input id="task" class="inputAdd"><button id="add" class="addBtn">Add</button>
-    <hr>
-    <div id="todos"></div>
-
-    <script src="main.js"></script>
+    </footer>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
