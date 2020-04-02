@@ -14,26 +14,27 @@
         <hr>
     </header>
     <nav class="topnav">
-        <ul id="myLinks">
-            <li class="menuList"><a href="#home" class="active">Home</a></li>
-            <li class="menuList"><a href="#chicken">Chicken</a></li>
-            <li class="menuList"><a href="#Beef">Beef</a></li>
-            <li class="menuList"><a href="#pork">Pork</a></li>
-            <li class="menuList"><a href="#lamb">Lamb</a></li>
-        </ul>
-        
+        <button class="menuList"><a href="index.html" class="active">Home</a></button>
+        <button class="menuList" id="chicken">Chicken</button>
+        <button class="menuList" id="beef">Beef</button>
+        <button class="menuList" id="pork">Pork</button>
+        <button class="menuList" id="lamb">Lamb</button>
+        <button class="menuList" id="seafood">Seafood</button>
+        <button class="menuList" id="vegetarian">Vegetarian</button>
+        <button class="menuList" id="vegan">Vegan</button>
     </nav>
     <main class="mainStyles">
         <hr>
-        <h2>Type in an ingredient to find recipes that feature that ingredient.</h2>
-        <input type="text" id="userIngredient" value="Ingredient">
-        <button type="button" id="ingredientSubmit">Submit</button>
-        <img id="picture" src="images/fullmeal.jpg">
+        <div id="recipeDiv">
+            Choice of recipes here.
+            <img id="picture" src="images/fullmeal.jpg">
+        </div>
+
         <hr>
     </main>
     <footer>
         <h4>&copy;2020 Gwendolyn Allphin CIT261</h4>
     </footer>
-    <link href="recipe.js">
+    <script src="recipe.js"></script>
 </body>
 </html>

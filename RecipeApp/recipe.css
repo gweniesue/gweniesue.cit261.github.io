@@ -12,16 +12,20 @@
     font-size: 1.25em;
 }
 
-.menuList{
-    display: inline;
-    list-style-type: none;
-    padding-right: 6px;
-
-}
-
-.menuList a {
+.topnav button {
+    background-color: #c4a287;
+    border: solid 1px #b07156;
+    color: white;
+    padding: 10px;
+    text-align: center;
     text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
 }
+
 
 .active {
     color: #ffffff;
