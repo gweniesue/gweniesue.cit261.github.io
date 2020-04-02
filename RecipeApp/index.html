@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre|Luckiest+Guy&display=swap" rel="stylesheet">
+    <link href="recipe.css" rel="stylesheet">
+</head>
+<body class="background">
+    <header>
+        <img src="images/heroImage.jpg" alt="hamburger and all of the fixings" class="heroPic">
+        <h1>The Recipe App!</h1>
+        <hr>
+    </header>
+    <nav class="topnav">
+        <ul id="myLinks">
+            <li class="menuList"><a href="#home" class="active">Home</a></li>
+            <li class="menuList"><a href="#chicken">Chicken</a></li>
+            <li class="menuList"><a href="#Beef">Beef</a></li>
+            <li class="menuList"><a href="#pork">Pork</a></li>
+            <li class="menuList"><a href="#lamb">Lamb</a></li>
+        </ul>
+        
+    </nav>
+    <main class="mainStyles">
+        <hr>
+        <h2>Type in an ingredient to find recipes that feature that ingredient.</h2>
+        <input type="text" id="userIngredient" value="Ingredient">
+        <button type="button" id="ingredientSubmit">Submit</button>
+        <img id="picture" src="images/fullmeal.jpg">
+        <hr>
+    </main>
+    <footer>
+        <h4>&copy;2020 Gwendolyn Allphin CIT261</h4>
+    </footer>
+    <link href="recipe.js">
+</body>
+</html>

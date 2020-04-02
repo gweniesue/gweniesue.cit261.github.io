@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.background {
+    background: #c4a287;
+}
+
+.topnav {
+    background: #ab4e68;
+    padding: 15px;
+    font-size: 1.25em;
+}
+
+.menuList{
+    display: inline;
+    list-style-type: none;
+    padding-right: 6px;
+
+}
+
+.menuList a {
+    text-decoration: none;
+}
+
+.active {
+    color: #ffffff;
+    }
+
+
+.mainStyles {
+    background: #9d9171;
+}
+
+hr {
+    border:3px solid #533745;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.heroPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 75%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#userIngredient {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    font-size: 2em;
+    border-radius: 12px;
+}
+
+#ingredientSubmit {
+    background-color: #ab4e68;
+    border: solid 1px #533745;
+    color: white;
+    padding: 17px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#picture {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    padding: 20px;
+}
