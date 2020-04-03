@@ -42,6 +42,7 @@ hr {
 
 h1 {
     font-family: 'Luckiest Guy', cursive;
+    color: #3b2731;
     text-align: center;
     font-size: 3em;
     margin-bottom: 15px;
@@ -86,6 +87,7 @@ h2 {
 
 #picture {
     display: block;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
