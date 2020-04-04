@@ -1,95 +1,124 @@
-// set constants
-const beefButton = document.getElementById('beef');
-const chickenButton = document.getElementById('chicken')
-const porkButton = document.getElementById('pork');
-const lambButton = document.getElementById('lamb');
-const seafoodButton = document.getElementById('seafood');
-const vegetarianButton = document.getElementById('vegetarian');
-const veganButton = document.getElementById('vegan');
-const recipes = document.getElementById('recipeDiv');
-
-// assign URLs to variables
-
-const beefURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef';
-const chickenURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken';
-const porkURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork';
-const lambURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb';
-const seafoodURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
-const vegetarianURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian';
-const veganURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan';
+ // set constants
+ const beefButton = document.getElementById('beef').addEventListener('click', getBeefRecipes);
+ const chickenButton = document.getElementById('chicken').addEventListener('click', getChickenRecipes);
+ const porkButton = document.getElementById('pork').addEventListener('click', getPorkRecipes);
+ const lambButton = document.getElementById('lamb').addEventListener('click', getLambRecipes);
+ const seafoodButton = document.getElementById('seafood').addEventListener('click', getSeafoodRecipes);
+ const vegetarianButton = document.getElementById('vegetarian').addEventListener('click', getVegetarianRecipes);
+ const veganButton = document.getElementById('vegan').addEventListener('click', getVeganRecipes);
 
 
+ function getBeefRecipes() {
+     fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef')
+     .then((res) => res.json())
+     .then((menus) => {
+         let output = `<h2>Beef Recipes</h2>`;
+         menus = JSON.parse(JSON.stringify(menus));
+         for (let i = 0; i < menus.length; i++) {
+             output =+ `
+                <li>${meals[i].strMeal}</li>
+                <li>${meals[i].strMealThumb} + '/preview'</li>
+             `;
+         };
+         document.getElementById('recipeDiv').innerHTML = output;
+     })
+ }
 
-// assigning event handler to beef
-beefButton.addEventListener('click', () => {
-  fetch(beefURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to chicken
-chickenButton.addEventListener('click', () => {
-  fetch(chickenURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to pork
-porkButton.addEventListener('click', () => {
-  fetch(porkURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to lamb
-lambButton.addEventListener('click', () => {
-  fetch(lambURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to Seafood button
-seafoodButton.addEventListener('click', () => {
-  fetch(seafoodURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to Vegetarian
-vegetarianButton.addEventListener('click', () => {
-  fetch(vegetarianURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
-
-// assigning event handler to Vegan button
-veganButton.addEventListener('click', () => {
-  fetch(veganURL)
-  .then( response => {return response;})
-  .then( response => response.text() )
-  .then( text => recipes.innerText = text )
-  .catch( error => console.log('there was an error:', error))
-}, false);
+ function getChickenRecipes() {
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Chicken')
+    .then((res) => res.json())
+    .then((menus) => {
+        let output = `<h2>Chicken Recipes</h2>`;
+        menus = JSON.parse(JSON.stringify(menus));
+        for (let i = 0; i < menus.length; i++) {
+            output =+ `
+               <li>${meals[i].strMeal}</li>
+               <li>${meals[i].strMealThumb} + '/preview'</li>
+            `;
+        };
+        document.getElementById('recipeDiv').innerHTML = output;
+    })
+}
 
 
+function getPorkRecipes() {
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Pork')
+    .then((res) => res.json())
+    .then((menus) => {
+        let output = `<h2>Pork Recipes</h2>`;
+        menus = JSON.parse(JSON.stringify(menus));
+        for (let i = 0; i < menus.length; i++) {
+            output =+ `
+               <li>${meals[i].strMeal}</li>
+               <li>${meals[i].strMealThumb} + '/preview'</li>
+            `;
+        };
+        document.getElementById('recipeDiv').innerHTML = output;
+    })
+}
 
-function appendRecipeList(data){
-  let mainContainer = document.getElementById("recipeDiv");
-  for (let i = 0; data.length; i++){
-    let div = document.createElement("div");
-    div.innerHTML = data[i].strMealThumb + '/preview';
-    mainContainer.appendChild(div);
-  }
-};
+function getLambRecipes() {
+   fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb')
+   .then((res) => res.json())
+   .then((menus) => {
+       let output = `<h2>Lamb Recipes</h2>`;
+       menus = JSON.parse(JSON.stringify(menus));
+       for (let i = 0; i < menus.length; i++) {
+           output =+ `
+              <li>${meals[i].strMeal}</li>
+              <li>${meals[i].strMealThumb} + '/preview'</li>
+           `;
+       };
+       document.getElementById('recipeDiv').innerHTML = output;
+   })
+}
+
+function getSeafoodRecipes() {
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood')
+    .then((res) => res.json())
+    .then((menus) => {
+        let output = `<h2>Seafood Recipes</h2>`;
+        menus = JSON.parse(JSON.stringify(menus));
+        for (let i = 0; i < menus.length; i++) {
+            output =+ `
+               <li>${menus[i].strMeal}</li>
+               <li>${menus[i].strMealThumb} + '/preview'</li>
+            `;
+        };
+        document.getElementById('recipeDiv').innerHTML = output;
+    })
+}
+
+
+function getVegetarianRecipes() {
+    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegetarian')
+    .then((res) => res.json())
+    .then((menus) => {
+        let output = `<h2>Vegetarian Recipes</h2>`;
+        //meals = JSON.parse(JSON.stringify(meals));
+        for (let i = 0; i < menus.length; i++) {
+            output =+ `
+               <li>${menus[i].strMeal}</li>
+               <li>${menus[i].strMealThumb} + '/preview'</li>
+            `;
+        };
+        document.getElementById('recipeDiv').innerHTML = output;
+    })
+}
+
+function getVeganRecipes() {
+   fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan')
+   .then((res) => res.json())
+   .then((menus) => {
+       let output = `<h2>Vegan Recipes</h2>`;
+       //menus = JSON.parse(JSON.stringify(menus));
+       for (let i = 0; i < menus.length; i++) {
+           output =+ `
+              <li>${meals[i].strMeal}</li>
+              <li>${meals[i].strMealThumb} + '/preview'</li>
+           `;
+       };
+       document.getElementById('recipeDiv').innerHTML = output;
+   })
+}
+
