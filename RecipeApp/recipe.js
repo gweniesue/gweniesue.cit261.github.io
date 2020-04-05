@@ -78,11 +78,11 @@ function getSeafoodRecipes() {
     .then((res) => res.json())
     .then((menus) => {
         let output = `<h2>Seafood Recipes</h2>`;
-        menus = JSON.parse(JSON.stringify(menus));
+        //menus = JSON.parse(JSON.stringify(menus));
         for (let i = 0; i < menus.length; i++) {
             output =+ `
-               <li>${menus[i].strMeal}</li>
-               <li>${menus[i].strMealThumb} + '/preview'</li>
+               <li>${menus[i].meals.strMeal}</li>
+               <li>${menus[i].meals.strMealThumb} + '/preview'</li>
             `;
         };
         document.getElementById('recipeDiv').innerHTML = output;
@@ -110,12 +110,13 @@ function getVeganRecipes() {
    fetch('https://www.themealdb.com/api/json/v1/1/filter.php?c=Vegan')
    .then((res) => res.json())
    .then((menus) => {
+       console.log(menus.strMeal);
        let output = `<h2>Vegan Recipes</h2>`;
        //menus = JSON.parse(JSON.stringify(menus));
        for (let i = 0; i < menus.length; i++) {
            output =+ `
-              <li>${meals[i].strMeal}</li>
-              <li>${meals[i].strMealThumb} + '/preview'</li>
+              <li>${menus[i].strMeal}</li>
+              <li>${menus[i].strMealThumb} + '/preview'</li>
            `;
        };
        document.getElementById('recipeDiv').innerHTML = output;
